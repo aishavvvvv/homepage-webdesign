@@ -1,0 +1,46 @@
+body {
+    background-color:rgb(81, 187, 62);
+    font-size: 30px;
+}
+
+
+p {
+    background-color:hotpink;
+    color:rgb(117, 6, 60);
+    border: dashed 10px rgb(64, 111, 16);
+
+    text-align: right;
+   /* width: 1000px; */
+
+   /* padding is for internal spacing*/
+   padding: 20px 100px 20px 100px;
+
+   /* marging is for external spacing*/
+   margin: 50px;
+   /*padding-right: 100px;*/
+}
+
+/*
+    for padding:
+    1 value: all sides
+
+    2 values:   1st = top/bottom
+                2nd = left/right
+
+    4 values: 1st = top, 2nd = right, 3rd = bottom, 4th = left (moves clockwise)
+*/
+
+h1{
+    /* font-size: 60px; */
+}
+
+.special {
+    background-color:darkmagenta;
+    color:darkorchid;
+    border-radius: 30px;
+}
+
+.centered-text {
+    text-align:center;
+    padding: 20px;
+}
