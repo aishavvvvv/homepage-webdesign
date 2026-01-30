@@ -1,6 +1,7 @@
 body {
-    background-color:rgb(81, 187, 62);
+    background-color:rgb(242, 186, 214);
     font-size: 30px;
+    font-family: "Ballet", cursive;
 }
 
 
@@ -35,8 +36,8 @@ h1{
 }
 
 .special {
-    background-color:darkmagenta;
-    color:darkorchid;
+    background-color:hotpink;
+    color:rgb(241, 97, 169);
     border-radius: 30px;
 }
 
