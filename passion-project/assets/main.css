@@ -1,0 +1,26 @@
+body {
+    background-image: url("../assets/glitter.gif");
+    background-color: #f0a2d6;
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+img {
+    display: block;
+    margin-top: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1 {
+    color:rgb(57, 208, 37);
+    font-size: 100px;
+    margin-bottom: 5px;
+    outline: 5px dotted rgb(0, 161, 3);
+}
+
+h2 {
+    color: rgb(57, 208, 37);
+}

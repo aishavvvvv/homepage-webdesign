@@ -45,3 +45,7 @@ h1{
     text-align:center;
     padding: 20px;
 }
+
+ul {
+    list-style: square inside url("assets/images/original.webp");
+}
