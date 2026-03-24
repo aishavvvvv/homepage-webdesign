@@ -1,0 +1,19 @@
+body {
+    background-image: url("../assets/IMAGES/world trade center.jpg");}
+
+.topflags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    margin-top: 100px;
+    gap: 20px;
+}
+
+.bottomflags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    gap: 20px;
+}
