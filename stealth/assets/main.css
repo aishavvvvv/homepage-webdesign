@@ -1,0 +1,18 @@
+body {
+    background-color:rgb(21, 21, 21)
+}
+
+div {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}
+
+div img {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+}

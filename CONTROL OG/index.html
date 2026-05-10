@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>GAY ALIEN HANGOUT</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet">
+
+		<link rel="stylesheet"
+		href="assets/main.css">
+ 
+		<style>
+		#container {
+			margin: 0px auto;
+			width: 500px;
+			height: 375px;
+		}
+		#videoElement {
+			width: 500px;
+			height: 375px;
+			background-color: #666;
+		}
+		</style>
+	</head>
+ 
+	<body>
+		<div class="speciesnum">
+			<p>YOUR SUPER UNIQUE AND SPECIAL ALIEN SPECIES NUMBER: <span id="hue-value">0deg</span></p>
+		</div>
+
+		<div id="container">
+			<video autoplay="true" id="videoElement">
+			</video>
+		</div>
+	<script>
+		var video = document.querySelector("#videoElement");
+
+		if (navigator.mediaDevices.getUserMedia) {
+ 		 navigator.mediaDevices.getUserMedia({ video: true })
+    	.then(function (stream) {
+      	video.srcObject = stream;
+    	})
+    	.catch		
+			(function (err0r) {
+      		console.log("Something went wrong!");
+   			});
+		}
+	</script>
+
+<div class="hueslider">
+	<input type="range" id="hue-slider" min="0" max="360" value="0">
+</div>
+
+	</body>
+</html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>stealth</title>
+        <link rel="stylesheet" href="assets/main.css">
+
+</head>
+
+<body>
+
+<div>
+    <img src="assets/photoscans/loose1.png" draggable="true">
+    <img src="assets/photoscans/loose2.png" draggable="true">
+    <img src="assets/photoscans/loose3.png" draggable="true">
+    <img src="assets/photoscans/loose4.png" draggable="true">
+    <img src="assets/photoscans/loose5.png" draggable="true">
+    <img src="assets/photoscans/loose6.png" draggable="true">
+    <img src="assets/photoscans/loose7.png" draggable="true">
+    <img src="assets/photoscans/loose8.png" draggable="true">
+    <img src="assets/photoscans/loose9.png" draggable="true">
+    <img src="assets/photoscans/loose10.png" draggable="true">
+    <img src="assets/photoscans/loose11.png" draggable="true">
+    <img src="assets/photoscans/loose12.png" draggable="true">
+    <img src="assets/photoscans/loose13.png" draggable="true">
+    <img src="assets/photoscans/loose14.png" draggable="true">
+    <img src="assets/photoscans/loose15.png" draggable="true">
+    <img src="assets/photoscans/loose16.png" draggable="true">
+    <img src="assets/photoscans/loose17.png" draggable="true">
+    <img src="assets/photoscans/loose18.png" draggable="true">
+    <img src="assets/photoscans/loose19.png" draggable="true">
+    <img src="assets/photoscans/loose20.png" draggable="true">
+    <img src="assets/photoscans/loose21.png" draggable="true">
+    <img src="assets/photoscans/loose22.png" draggable="true">
+    <img src="assets/photoscans/loose23.png" draggable="true">
+    <img src="assets/photoscans/loose24.png" draggable="true">
+    <img src="assets/photoscans/loose25.png" draggable="true">
+    <img src="assets/photoscans/loose26.png" draggable="true">
+    <img src="assets/photoscans/loose27.png" draggable="true">
+    <img src="assets/photoscans/loose28.png" draggable="true">
+    <img src="assets/photoscans/loose29.png" draggable="true">
+    <img src="assets/photoscans/loose31.png" draggable="true">
+    <img src="assets/photoscans/loose32.png" draggable="true">
+    <img src="assets/photoscans/loose33.png" draggable="true">
+    <img src="assets/photoscans/loose34.png" draggable="true">
+    <img src="assets/photoscans/loose35.png" draggable="true">
+    <img src="assets/photoscans/loose36.png" draggable="true">
+    <img src="assets/photoscans/loose37.png" draggable="true">
+    <img src="assets/photoscans/loose38.png" draggable="true">
+    <img src="assets/photoscans/loose39.png" draggable="true">
+    <img src="assets/photoscans/loose40.png" draggable="true">
+    <img src="assets/photoscans/loose41.png" draggable="true">
+    <img src="assets/photoscans/loose42.png" draggable="true">
+    <img src="assets/photoscans/loose43.png" draggable="true">
+    <img src="assets/photoscans/loose44.png" draggable="true">
+    <img src="assets/photoscans/loose45.png" draggable="true">
+    <img src="assets/photoscans/loose46.png" draggable="true">
+    <img src="assets/photoscans/loose47.png" draggable="true">
+    <img src="assets/photoscans/loose48.png" draggable="true">
+    <img src="assets/photoscans/loose49.png" draggable="true">
+</div>
+
+<script>
+    document.querySelectorAll("img").forEach(e => {
+        const x = 1500 * Math.random();
+        const y = 600 * Math.random();
+        const angle = 20 * (Math.random() * 2 - 1);
+        const z = parseInt(Math.random() * 100);
+
+        e.style.left = x + "px";
+        e.style.top = y + "px";
+        e.style.transform = `rotate(${angle}deg)`;
+        e.style.zIndex = z;
+        e.draggable = false;
+        
+    });
+
+document.querySelectorAll("img").forEach(img => {
+    dragElement(img);
+});
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id)) {
+    document.getElementById(elmnt.id).onmousedown = dragMouseDown;
+  } else {
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
+}
+
+</script>
+
+</body>
+</html>
